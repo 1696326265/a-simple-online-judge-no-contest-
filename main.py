@@ -33,9 +33,12 @@ def face():
 			</div>'
 	else:
 		res = gaohead()
-		
-		f = open('pro/overview','r')
-		res = res + f.read()
+		try:
+			f = open('pro/overview','r')
+			res = res + f.read()
+		except:
+			f = open('pro/overview','r',encoding='gbk')
+			res = res + f.read()
 		return res + gaotail()
 	
 @app.route('/login',methods=["POST"])
@@ -72,8 +75,12 @@ def login():
 def seeprob(pid):
 	res = gaohead()
 	res = res + '<a href="/sbmt/' + pid + '">submit</a><br><br>'
-	f = open('pro/'+pid+'/stat','r')
-	res = res + f.read()
+	try:
+		f = open('pro/'+pid+'/stat','r')
+		res = res + f.read()
+	except:
+		f = open('pro/'+pid+'/stat','r',encoding='gbk')
+		res = res + f.read()
 	return res
 
 @app.route('/sbmt/<pid>')
@@ -191,8 +198,7 @@ def doedit():
 	return gaohead() + "<h1>ok</h1>" + gaotail()
 
 if __name__=='__main__':
-	app.run(host='0.0.0.0')
-
+	app.run(host='0.0.0.0',port=5000)
 
 
 
