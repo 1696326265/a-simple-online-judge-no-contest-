@@ -62,11 +62,11 @@ int main(){
 						if ((ttim-stim)/1e6>tl||system(str)){
 							fprintf(ans,"<h2>Rejected</h2>\n");
 							fprintf(ans,"<h3>timeusd : %lf</h3>\n",(ttim-stim)/1e6);
-							fprintf(ans,"<h3>the code if from %s</h3>\n",usn);
+							fprintf(ans,"<h3>the code is from %s</h3>\n",usn);
 						}else{
 							fprintf(ans,"<h2>Accepted</h2>\n");
 							fprintf(ans,"<h3>timeusd : %lf</h3>\n",(ttim-stim)/1e6);
-							fprintf(ans,"<h3>the code if from %s</h3>\n",usn);
+							fprintf(ans,"<h3>the code is from %s</h3>\n",usn);
 						}
 						fclose(ans);
 					}
