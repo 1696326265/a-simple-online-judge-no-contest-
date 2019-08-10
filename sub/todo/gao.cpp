@@ -35,8 +35,12 @@ int main(){
 					{
 						sprintf(str,"../../pro/%s/tl",pid);
 						FILE *f=fopen(str,"r");
-						fscanf(f,"%lf",&tl);
-						fclose(f);
+						if (f==NULL){
+							tl=1;
+						}else{
+							fscanf(f,"%lf",&tl);
+							fclose(f);
+						}
 					}
 					long long stim, ttim;
 					{
