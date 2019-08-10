@@ -27,6 +27,8 @@
 
 我也给出了两道题目样例，a_plus_b.zip 和 challenge.zip
 
+什么，你居然不会用 html 写题面？直接用 typora 导出成 html(without style) 然后将 &lt;body&gt; 和 &lt;/body&gt; 之间的内容拖出来
+
 不难发现，由于配置文件咕咕咕，现只支持一组测试数据
 
 为了服务器性能，每次题目修改都有一定时间的延时，不要反复提交
