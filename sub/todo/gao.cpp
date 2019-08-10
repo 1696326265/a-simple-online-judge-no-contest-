@@ -46,6 +46,7 @@ int main(){
 					{
 						sprintf(str,"g++ ../%s/x.cpp -o x -O2",s);
 						system(str);
+						system("rm out");
 						{
 							FILE *sh=fopen("fuck.sh","w");
 							fprintf(sh,"ulimit -t %.0lf\n",tl+2);
